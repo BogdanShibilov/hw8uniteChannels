@@ -39,7 +39,7 @@ func main() {
 
 func joinChannels(channels ...<-chan int) chan int {
 	result := make(chan int)
-	wg := &sync.WaitGroup{}
+	wg := sync.WaitGroup{}
 	wg.Add(len(channels))
 
 	go func() {
